@@ -1,0 +1,141 @@
+/* App.css */
+
+/* Temel Stiller */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.editor-container {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Form Canvas */
+.form-canvas {
+  flex: 3;
+  position: relative;
+  border: 2px dashed #ccc;
+  min-height: 500px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.form-box {
+  position: absolute;
+  border: 2px solid #4a90e2;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: border-color 0.2s;
+}
+
+.form-box.selected {
+  border-color: #ff7043;
+  background-color: rgba(255, 112, 67, 0.1);
+  box-shadow: 0 0 0 2px rgba(255, 112, 67, 0.5);
+}
+
+.box-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  pointer-events: none;
+}
+
+.resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff7043;
+  border-radius: 50%;
+  cursor: nwse-resize;
+}
+
+/* Toolbar */
+.toolbar {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.toolbar-section {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tool-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.tool-button:hover {
+  background-color: #357abd;
+}
+
+.tool-button.delete {
+  background-color: #e74c3c;
+}
+
+.tool-button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* File Uploader */
+.file-uploader {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.file-uploader input[type="file"] {
+  width: 100%;
+  margin-top: 10px;
+}

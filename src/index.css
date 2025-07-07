@@ -1,0 +1,10 @@
+
+/* Custom CSS buraya */
+.custom-canvas {
+  image-rendering: pixelated;
+}
+
+.contour-box {
+  border: 3px solid #00FF00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
